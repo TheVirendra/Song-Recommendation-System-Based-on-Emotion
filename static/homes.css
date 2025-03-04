@@ -1,0 +1,143 @@
+/* General Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif; /* Clean and modern Google font */
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Smooth gradient */
+    background-image: url('dashs-bg.jpg'); /* Updated background image */
+    background-size: cover; /* Ensure the image covers the screen */
+    background-attachment: fixed; /* Parallax effect */
+   
+    color: #444; /* Neutral text color */
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background: rgba(19, 61, 106, 0.9); /* Slightly transparent for depth */
+    color: white;
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    
+    padding: 15px 30px;
+    
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin-right: 25px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded buttons */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #1e88e5; /* Bright hover effect */
+    transform: scale(1.1); /* Slight zoom */
+}
+.navbar .user {
+    font-size: 1rem;
+}
+
+   
+
+/* Home Container Styles */
+.home-container {
+     /* Transparent white card */
+    border-radius: 10px; /* Smooth corners */
+    padding: 40px;
+    margin: 100px auto 40px; /* Space from navbar and centering */
+    max-width: 800px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+.home-container h1 {
+    color: #1e88e5; /* Vibrant blue for headings */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; /* Centered title */
+}
+
+.home-container h2 {
+    color: #333;
+    font-size: 1.8em;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.home-container p {
+    color: #666;
+    line-height: 1.8; /* Better spacing for readability */
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.home-container a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.home-container a:hover {
+    color: #1565c0; /* Darker blue for hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1e88e5; /* Match navbar */
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin-bottom: 10px;
+    }
+
+    .home-container {
+        padding: 20px;
+        margin: 80px 10px;
+    }
+}

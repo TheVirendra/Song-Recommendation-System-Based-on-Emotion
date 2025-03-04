@@ -1,0 +1,18 @@
+Flask
+Flask-Cors
+gunicorn
+DeepFace
+opencv-python
+mediapipe
+numpy
+pandas
+requests
+google-generativeai
+nltk
+scikit-learn
+# sqlite3
+docker
+kubernetes
+tensorflow==2.18.0
+tf-keras
+vaderSentiment

@@ -1,0 +1,234 @@
+:root {
+    --primary-color: #7c5dfa;
+    --secondary-color: #9d4edd;
+    --accent-color: #ff61d2;
+    --background-color: #120638;
+    --text-color: #ffffff;
+    --input-bg: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(45, 45, 68, 0.9);
+    --gradient-1: #ff61d2;
+    --gradient-2: #7c5dfa;
+    --gradient-3: #4cc9f0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-color);
+    background-image: 
+        linear-gradient(45deg, 
+            rgba(124, 93, 250, 0.1) 0%, 
+            rgba(157, 78, 221, 0.1) 50%, 
+            rgba(255, 97, 210, 0.1) 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.register-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.music-icon {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.note {
+    font-size: 2.5rem;
+    animation: floating 3s ease-in-out infinite;
+    color: var(--accent-color);
+}
+
+.note:nth-child(2) {
+    animation-delay: 0.2s;
+    color: var(--gradient-2);
+}
+
+.note:nth-child(3) {
+    animation-delay: 0.4s;
+    color: var(--gradient-3);
+}
+
+h2 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: var(--accent-color);
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.5s forwards;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--input-bg);
+    border: 2px solid rgba(185, 160, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 97, 210, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    background-size: 200% auto;
+    color: var(--text-color);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 97, 210, 0.3);
+}
+
+.button-text {
+    position: relative;
+}
+
+.button-icon {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+button:hover .button-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.login-link a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(to right, var(--gradient-1), var(--gradient-2));
+    transition: width 0.3s ease;
+}
+
+.login-link a:hover::after {
+    width: 100%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .register-box {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,167 @@
+/* Basic Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Chat Container Styles */
+.chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Message Styles */
+.message {
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    line-height: 1.4;
+}
+
+/* User Message */
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+/* Assistant Message */
+.assistant-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+/* Footer Styles */
+footer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Chat Input Form Styles */
+form {
+    display: flex;
+    max-width: 600px;
+    margin: 10px auto 0;
+    /* Added top margin for spacing */
+    width: 100%;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Button Styles */
+.button {
+    border: none;
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    /* Adjusted padding for better appearance */
+    text-align: center;
+    /* Centered text */
+    text-decoration: none;
+    /* No underline */
+    display: inline-block;
+    /* Make the button appear inline */
+    font-size: 16px;
+    /* Font size */
+    margin: 0;
+    /* Reset margin to avoid misalignment */
+    transition-duration: 0.4s;
+    /* Animation duration */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* Default button color */
+.button {
+    background-color: #007bff;
+    /* Default button color */
+}
+
+/* Hover effects */
+.button:hover {
+    background-color: white;
+    /* White background on hover */
+    color: #007bff;
+    /* Text color on hover */
+    border: 2px solid #007bff;
+    /* Border on hover */
+}
+
+/* Additional button styles for different sentiments */
+.button-positive {
+    background-color: #4CAF50;
+    /* Green */
+}
+
+.button-negative {
+    background-color: #F44336;
+    /* Red */
+}
+
+.button-neutral {
+    background-color: #FFC107;
+    /* Yellow */
+}

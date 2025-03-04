@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Music Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul>
+                <li><a href="{{ url_for('homes') }}">
+                    <span class="nav-icon">🎵</span>Home</a>
+                </li>
+                <li><a href="{{ url_for('chat') }}">
+                    <span class="nav-icon">💭</span>Chat</a>
+                </li>
+                <li><a href="{{ url_for('about') }}" class="active">
+                    <span class="nav-icon">ℹ️</span>About</a>
+                </li>
+                <li><a href="{{ url_for('logout') }}" class="logout-link">
+                    <span class="nav-icon">👋</span>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about-container">
+        <div class="header-section">
+            <span class="music-icon">♪</span>
+            <h1>AI-Powered Music Recommendations</h1>
+            <div class="divider"></div>
+        </div>
+
+        <div class="content-section">
+            <p class="description">
+                This project presents a song recommendation system using a chatbot, integrating AI-based sentiment analysis and song
+                suggestions. The system utilizes an AI API key for natural language processing to enable real-time interactions with
+                users. Through conversational exchange, the chatbot assesses the user's emotional state—categorizing it as happy, sad,
+                or neutral—using sentiment analysis techniques.
+            </p>
+
+            <div class="feature-section">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>🤖 AI-Powered Chatbot</li>
+                    <li>💭 Sentiment Analysis</li>
+                    <li>🎵 Letest Bollywood Songs</li>
+                    <li>🎯 Personalized Recommendations</li>
+                </ul>
+            </div>
+
+            <div class="team-section">
+                <h2>Project Team</h2>
+                <div class="team-members">
+                    <div class="member">Mr. Virendra Pawar</div>
+                    <div class="member">Mr. Sahil Tawari</div>
+                    <div class="member">Mr. Saad Khan</div>
+                    <div class="member">Mr. Sandeep Daberao</div>
+                    <div class="member">Mr. Sankalp Jumale</div>
+                </div>
+            </div>
+
+            <div class="guide-section">
+                <h2>Under the Guidance of</h2>
+                <div class="guide">Prof. B.S. Nawle</div>
+                <p class="college">Shri Sant Gajanan Maharaj College of Engineering, Shegaon</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Prediction</title>
+</head>
+
+<body>
+    <!-- Video Feed -->
+    <div>
+        <h2>Video Feed</h2>
+        <img src="{{ url_for('video_feed') }}" id="video" />
+    </div>
+
+    <!-- Button that changes based on emotion prediction -->
+    <div>
+        <button id="emotion_button" onclick="alert('Button Clicked!')"></button>
+    </div>
+
+    <script>
+        // Get the sentiment value from Flask (sentiment passed from backend)
+        let sentiment = "{{ sentiment }}";
+
+        // Function to update the button text
+        function updateButton(sentiment) {
+            const button = document.getElementById('emotion_button');
+
+            if (sentiment === "positive") {
+                button.textContent = "Generate Positive";
+            } else if (sentiment === "negative") {
+                button.textContent = "Generate Negative";
+            } else {
+                button.textContent = "Generate Neutral";
+            }
+        }
+
+        // Call the update function when the page loads
+        window.onload = function () {
+            updateButton(sentiment);
+        };
+    </script>
+</body>
+
+</html>

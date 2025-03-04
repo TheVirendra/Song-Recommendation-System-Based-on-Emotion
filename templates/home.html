@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Song Recommendation System Based on Emotion</h1>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="welcome-container">
+            <div class="welcome-message">
+                <h1>Welcome to Our Music World </h1>
+                <p class="subtitle">Your personal AI assistant for music recommendations and chatting.</p>
+            </div>
+
+            <div class="btn-group">
+                <a href="{{ url_for('register') }}" class="btn">Register</a>
+                <a href="{{ url_for('login') }}" class="btn btn-alt">Login</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Song Recommendation System Based on Emotion. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Music Recommendation System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background-notes">
+    <span>♪</span><span>♫</span><span>♬</span>
+    <span>♩</span><span>♪</span><span>♫</span>
+  </div>
+  
+  <div class="container">
+    <div class="login-box">
+      <div class="login-header">
+        <div class="music-icon-container">
+          <span class="music-icon">
+            <span class="note">♪</span>
+            <span class="note">♫</span>
+            <span class="note">♬</span>
+          </span>
+          <div class="icon-ring"></div>
+        </div>
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Sign in to your account</p>
+      </div>
+      
+      <form method="POST" action="/login">
+        <div class="input-group">
+          <label for="username">
+            <span class="input-icon">👤</span>Username
+          </label>
+          <input type="text" id="username" name="username" required>
+          <span class="input-highlight"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="password">
+            <span class="input-icon">🔒</span>Password
+          </label>
+          <input type="password" id="password" name="password" required>
+          <span class="input-highlight"></span>
+        </div>
+
+        <button type="submit">
+          <span class="button-text">Login</span>
+          <span class="button-icon">🎵</span>
+        </button>
+        
+        <div class="register-link">
+          <p>Don't have an account? <a href="{{ url_for('register') }}">Register <span class="link-icon">🎼</span></a></p>
+        </div>
+      </form>
+
+      <div class="music-footer">
+        <span class="footer-note">♩</span>
+        <span class="footer-note">♪</span>
+        <span class="footer-note">♫</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

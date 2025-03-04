@@ -1,0 +1,223 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+  
+    /* Ensures padding and borders are included in element's total width and height */
+}
+
+body {
+    background-image:url(chat.jpg) ;
+    font-family: 'Arial', sans-serif;
+    /* Font style for the entire page */
+    margin: 0;
+    padding: 0;
+    background-image: url('heart.jpg');
+    /* Update this path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    /* Text color for better contrast */
+}
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.9);
+    /* Slightly transparent navbar */
+    backdrop-filter: blur(5px);
+    /* Background blur effect */
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center the navbar items */
+}
+
+.navbar li {
+    margin: 0 15px;
+    /* Space between menu items */
+}
+
+.navbar li a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+    border-radius: 5px;
+    /* Rounded corners for links */
+}
+
+.navbar li a:hover {
+    background-color: rgba(221, 221, 221, 0.5);
+    /* Subtle hover effect */
+    color: black;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.chat-container {
+    background-color: #ffffff;
+    /* White background for chat container */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+    width: 400px;
+    max-height: 500px;
+    /* Increased height for more messages */
+    overflow: hidden;
+    /* Hide overflow to prevent scrollbar on container */
+}
+
+.chat-header {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.2em;
+    /* Larger font for header */
+}
+
+.chat-box {
+    padding: 10px;
+    height: 420px;
+    /* Fixed height to allow scrolling */
+    overflow-y: auto;
+    /* Enable scrolling */
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+    /* Limit message width */
+    word-wrap: break-word;
+    /* Break long words */
+}
+
+.user-message {
+    background-color: #e1ffc7;
+    /* Light green for user messages */
+    text-align: right;
+    margin-left: auto;
+    /* Align user messages to the right */
+}
+
+.assistant-message {
+    background-color: #d1e7ff;
+    /* Light blue for assistant messages */
+    text-align: left;
+    margin-right: auto;
+    /* Align assistant messages to the left */
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f1f1f1;
+    /* Slightly darker input area */
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+    /* Transition for border color */
+}
+
+.chat-input input:focus {
+    border-color: #007bff;
+    /* Highlight border on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.sentiment-container {
+    padding: 10px;
+    text-align: center;
+    /* Center the sentiment text */
+}
+
+.sentiment {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 12px;
+    color: rgb(50, 40, 40);
+    font-weight: bold;
+    margin-top: 10px;
+    /* Space above sentiment */
+}
+
+.button-positive {
+    background-color: #28a745;
+    /* Green for positive sentiment */
+}
+
+.button-negative {
+    background-color: #dc3545;
+    /* Red for negative sentiment */
+}
+
+.button-neutral {
+    background-color: #6c757d;
+    /* Grey for neutral sentiment */
+}
+
+/* Styles for action button */
+.action-button {
+    display: none;
+    /* Initially hidden */
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.action-button.show {
+    display: block;
+    /* Show button when the class is added */
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}

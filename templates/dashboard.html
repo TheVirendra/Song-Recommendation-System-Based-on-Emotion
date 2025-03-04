@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}" class="active">
+                    <span class="nav-icon">🎵</span>Home</a>
+                </li>
+                <li><a href="{{ url_for('chat') }}">
+                    <span class="nav-icon">💭</span>Chat</a>
+                </li>
+                <li><a href="{{ url_for('index1') }}">
+                    <span class="nav-icon">😊</span>Face Emotion</a>
+                </li>
+                <li><a href="{{ url_for('about') }}">
+                    <span class="nav-icon">ℹ️</span>About</a>
+                </li>
+                <li><a href="{{ url_for('logout') }}" class="logout-link">
+                    <span class="nav-icon">👋</span>Logout</a>
+                </li>
+            </ul>
+           
+        </div>
+        <div class="user" id="userDisplay">Welcome, {{ username }}</div>
+    </nav>
+
+    <main class="main-content">
+        <div class="welcome-container">
+            <div class="welcome-message">
+                <h1>Welcome to the<br>Song Recommendation System</h1>
+                <p class="subtitle">Discover music that matches your mood</p>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <span class="feature-icon">🎭</span>
+                        <h3>Emotion Detection</h3>
+                        <p>Real-time facial emotion analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎵</span>
+                        <h3>Music Matching</h3>
+                        <p>Personalized song recommendations</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">💬</span>
+                        <h3>Smart Chat</h3>
+                        <p>Interactive music discussions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

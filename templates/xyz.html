@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify - Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Smooth gradient background */
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+        .emoji {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        .music-sentence {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='static/black white simple music logo.png') }}" alt="Moodify Logo" class="logo">
+        
+        <!-- Title -->
+        <h1>Welcome to Moodify 🎶</h1>
+
+        <!-- Music Sentence -->
+        <p class="music-sentence">Let the rhythm of your emotions guide your music choices! 🎧</p>
+
+        <!-- Emojis -->
+        <div class="emoji">😊 😎 😢 🎵</div>
+
+        <!-- Links -->
+        <p>
+            <a href="{{ url_for('register') }}">Register</a> 
+            <a href="{{ url_for('login') }}">Login</a>
+        </p>
+    </div>
+</body>
+</html>
