@@ -23,7 +23,7 @@ app.register_blueprint(chat_bp, url_prefix='/chat')
 
 
 # Initialize DeepFace model for emotion detection
-Model = DeepFace.build_model("Emotion")
+Model = DeepFace.build_model("emotion")
 class trainedmodel:
     def dummy_method(self):
         self.weights_h5_path = 'modelv1.h5'
