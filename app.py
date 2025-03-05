@@ -374,5 +374,7 @@ def chat():
 
 # Start the application
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Use PORT from environment or default to 10000
-    app.run(host="0.0.0.0", port=port)
+    port = os.getenv("PORT")  # Get PORT from environment variable
+    if port is None or not port.isdigit():
+        port = 5000  # Default to port 5000 if PORT is invalid
+    app.run(host="0.0.0.0", port=int(port))
