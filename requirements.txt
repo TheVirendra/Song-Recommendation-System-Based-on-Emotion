@@ -14,5 +14,5 @@ scikit-learn==1.6.1
 docker
 kubernetes
 tensorflow== 2.15.0
-tf-keras==2.18.0
+tf-keras==2.15.0
 vaderSentiment==3.3.2
