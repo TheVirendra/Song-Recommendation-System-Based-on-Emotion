@@ -368,5 +368,5 @@ def chat():
 
 # Start the application
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Render uses a dynamic port
-    app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 10000))  # Use Render-assigned PORT or default 10000
+    app.run(host="0.0.0.0", port=port, debug=False)
