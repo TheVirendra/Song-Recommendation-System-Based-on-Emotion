@@ -38,11 +38,13 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1, min_detection_confidence=0.5)
 
-cap = cv2.VideoCapture(0)
-if not os.getenv("RENDER"):
-    cap = cv2.VideoCapture(0)
-    if not cap.isOpened():
-        print("Warning: Camera not accessible. Skipping camera initialization.")
+if "RENDER" in os.environ:  # Check if running on Render
+    use_camera = False
+else:
+    use_camera = True
+
+if use_camera:
+    cap = cv2.VideoCapture(0)  # This will only run locally
 if not cap.isOpened():
     print("Error: Unable to access the camera")
     exit()
@@ -372,5 +374,5 @@ def chat():
 
 # Start the application
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Default to 10000 if PORT is not set
+    port = int(os.environ.get("PORT", 10000))  # Use PORT from environment or default to 10000
     app.run(host="0.0.0.0", port=port)
