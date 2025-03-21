@@ -128,8 +128,8 @@ def get_songs_by_singer():
 
 
 @app.route('/')
-def home():
-      return render_template('home.html')
+def index():
+      return render_template('index.html')
     
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -250,7 +250,7 @@ def logout():
     session.pop('chat_history', None)  # Clear chat history on logout
     session.pop('chat_count', None)  # Clear chat count on logout
     flash('You have been logged out.')
-    return redirect(url_for('home'))
+    return redirect(url_for('index'))
 
 @app.route('/about')
 def about():
