@@ -3,7 +3,7 @@ Flask-Cors
 gunicorn
 deepface==0.0.78
 opencv-python== 4.11.0.86
-mediapipe==0.10.9
+mediapipe==0.10.20
 numpy==1.26.4
 pandas== 2.2.3
 requests==2.32.3
